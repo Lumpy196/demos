@@ -1,3 +1,4 @@
 # demos
-1. Replace ItemWriter with LumpyWriter.
-2. Fix the job
+1. Replaced ItemWriter with LumpyWriter.
+2. Fixed the file"job-hello-world.xml".Replaced writer with Lumpywriter.
+3. No outputs found,fk.
