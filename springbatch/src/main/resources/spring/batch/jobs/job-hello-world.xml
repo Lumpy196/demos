@@ -16,7 +16,7 @@
     <batch:job id="helloWorldJob">
         <batch:step id="step1">
             <batch:tasklet>
-                <batch:chunk reader="cvsFileItemReader" writer="xmlItemWriter" processor="itemProcessor"
+                <batch:chunk reader="cvsFileItemReader" writer="LumpyWriter" processor="itemProcessor"
                              commit-interval="10">
                 </batch:chunk>
             </batch:tasklet>
@@ -54,6 +54,10 @@
         <property name="resource" value="file:xml/outputs/report.xml"/>
         <property name="marshaller" ref="reportMarshaller"/>
         <property name="rootTagName" value="report"/>
+    </bean>
+
+    <bean id = "LumpyWriter" class = "njuics.demos.pipefilter.LumpyWriter">
+
     </bean>
 
     <bean id="reportMarshaller" class="org.springframework.oxm.jaxb.Jaxb2Marshaller">
